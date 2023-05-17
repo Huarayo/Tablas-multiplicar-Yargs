@@ -27,11 +27,10 @@ const crearTabla = (base = 5, listar = false, hasta = 10) => {
     }
 
     //ruta de la creación del archivo txt
-    const carpeta = "salida";
+    const carpeta = "../salida";
     const nombreArchivo = `tabla-${base}.txt`;
-    const dir = 'C:\\Users\\User\\Desktop\\Leo\\Nodejs\\4-basesDeNode';
 
-    const rutaArchivo = path.join(dir , carpeta, nombreArchivo)
+    const rutaArchivo = path.join(__dirname , carpeta, nombreArchivo)
     
     //crear new file
     fs.writeFile(rutaArchivo,resultText, err => {
